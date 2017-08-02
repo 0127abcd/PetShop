@@ -1,0 +1,58 @@
+package com.ncu.txw.mysite.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="PETS")
+@Entity
+public class Pet {
+	
+	private Integer id;
+	private String petName;
+	private String petCategory;
+	private Integer petCount;
+	private int petPrice;
+	private String petImg;
+	
+	@GeneratedValue
+	@Id
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getPetName() {
+		return petName;
+	}
+	public void setPetName(String petName) {
+		this.petName = petName;
+	}
+	public String getPetCategory() {
+		return petCategory;
+	}
+	public void setPetCategory(String petCategory) {
+		this.petCategory = petCategory;
+	}
+	public Integer getPetCount() {
+		return petCount;
+	}
+	public void setPetCount(Integer petCount) {
+		this.petCount = petCount;
+	}
+	public int getPetPrice() {
+		return petPrice;
+	}
+	public void setPetPrice(int petPrice) {
+		this.petPrice = petPrice;
+	}
+	public String getPetImg() {
+		return petImg;
+	}
+	public void setPetImg(String petImg) {
+		this.petImg = petImg;
+	}
+	
+}

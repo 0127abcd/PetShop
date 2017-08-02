@@ -1,0 +1,20 @@
+package com.ncu.txw.mysite.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ncu.txw.mysite.entities.ShopCar;
+
+
+public interface ShopCarDao extends JpaRepository<ShopCar, Integer>{
+	
+	List<ShopCar> findAll();
+	
+	ShopCar getById(Integer id);
+	
+//	@Query(value="select id from SHOPCAR where user_id= ?1 order by id limit 1", nativeQuery=true)
+//	Integer getLastId(Integer user_id);
+	
+}
+

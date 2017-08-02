@@ -1,0 +1,14 @@
+package com.ncu.txw.mysite.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ncu.txw.mysite.entities.Pet;
+
+public interface PetDao extends JpaRepository<Pet, Integer>{
+
+	Pet getByPetName(String petName);
+	
+	List<Pet> getByPetCategory(String petCategory);
+}

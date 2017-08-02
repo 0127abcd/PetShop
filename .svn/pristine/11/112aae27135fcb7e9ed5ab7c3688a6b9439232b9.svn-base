@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="login?petCategory=cat&userName=${sessionScope.user.getUserName()}">cat</a>
+	<a href="login?petCategory=dog&userName=${sessionScope.user.getUserName()}">dog</a>
+	<br>
+	<c:if test="${pets == null || pageSize == 0 || pageNo < 1 || pageNo > pageCount }">
+		没有任何记录。
+	</c:if>
+	<c:if test="${pets != null && pageSize > 0 && pageNo ge 1 && pageNo <= pageCount }">
+		<table border="1" cellpadding="10" cellspacing="0">
+			<tr>
+				<th>ID</th>
+				<th>PetName</th>
+				<th>PetCategory</th>
+				
+				<th>PetCount</th>
+				<th>PetPrice</th>
+				
+				<th>PetImg</th>
+				
+				<th>详细</th>
+				<th>加入购物车</th>
+			</tr>
+			
+			<c:forEach items="${pets }" var="pet">
+				<tr>
+					<td>${pet.id }</td>
+					<td>${pet.petName }</td>
+					<td>${pet.petCategory }</td>
+					
+					<td>${pet.petCount }</td>
+					<td>${pet.petPrice }</td>
+					
+					<td>${pet.petImg }</td>
+					
+					<td><a href="${pageContext.request.contextPath }/petInfo&id=${pet.id}">详细</a></td>
+					<td>
+						<a href="${pageContext.request.contextPath }/petInfo&userName=${sessionScope.user.getUserName()}">加入购物车</a>
+						<input type="hidden" value="${pet.petName }">
+					</td>
+				</tr>
+			</c:forEach>
+			<tr>
+				<td colspan="8">
+					共  ${pageSize } 条记录
+					共 ${pageCount }  页
+					当前第 ${pageNo } 页
+					<c:if test="${pageNo ge 1 && pageNo < pageCount }">
+						<a href="?pageNo=${pageNo + 1}&userName=${sessionScope.user.getUserName()}&&petCategory=${petCategory}">下一页</a>
+					</c:if>
+					<c:if test="${pageNo > 1 && pageNo <= pageCount }">
+						<a href="?pageNo=${pageNo - 1}&userName=${sessionScope.user.getUserName()}&&petCategory=${petCategory}">上一页</a>
+					</c:if>
+					
+				</td>
+			</tr>
+			
+		</table>
+	</c:if>
+
+</body>
+</html>

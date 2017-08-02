@@ -1,0 +1,28 @@
+package com.ncu.txw.mysite.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ncu.txw.mysite.dao.PetDao;
+import com.ncu.txw.mysite.entities.Pet;
+
+@Service
+public class PetService {
+
+	@Autowired
+	private PetDao petDao;
+	
+	@Transactional
+	public Pet getByPetName(String petName){
+		return petDao.getByPetName(petName);
+	}
+	
+	@Transactional(readOnly=true)
+	public Page<Pet> getPage(int pageNo, int pageSize){
+		PageRequest pageable = new PageRequest(pageNo-1, pageSize);
+		return petDao.findAll(pageable);
+	}
+}

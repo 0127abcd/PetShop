@@ -1,0 +1,227 @@
+.left ul, li{
+	text-decoration: none;
+	list-style: none;
+}
+
+.left a{
+	text-decoration: none;
+	font-size:50px;
+	color: #999;
+}
+
+.left a:hover {
+	text-decoration: none;
+	font-size:50px;
+	color: #8c2830;
+}
+
+.left{
+	width:80px;
+	height:600px;
+	margin:7em 0px;
+	float:left;
+	margin-left: 0px;
+}
+
+.pets {
+	margin: 7em 0px;
+	width: 70%;
+	height: 750px;
+	margin-left:100px;
+	float:left;
+	margin-bottom: 0px;
+}
+
+.product-one {
+	margin-top: 10px;
+	width:100%;
+}
+.product-one:nth-child(1){
+	margin-top:0;
+}
+
+.product-left:hover .p-one{
+	border: 1px solid #8c2830;
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+}
+.product-left:hover .p-one img{
+	-webkit-transform: scale(0.9);
+	/* Webkit: Scale up image to 1.2x original size; */
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	opacity: 1;
+}
+
+.product-left:hover .p-one p a{
+	color: #8c2830;
+}
+.product-left:hover .mask{
+	display:block;
+}
+
+.product-left{
+	position:relative;
+	text-align:center;
+}
+
+.product-left:hover .p-one p i{
+	background: url(../images/cart-2.png) no-repeat;
+}
+
+.product-left {
+	width: 24%;
+	float: left;
+	padding: 10px 8px;
+}
+
+.product-left:hover .p-one p i {
+	width: 22px;
+	height: 16px;
+	margin-right: 3px;
+	background-size: 100%;
+}
+
+
+.p-one {
+	border: 0px;
+	padding: 40px 15px;
+}
+.p-one img {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  width:100%;
+}
+.p-one h4{
+	color: #242424;
+	font-size: 21px;
+	font-weight: 600;
+	margin: 5px 0 0 0;
+}
+.p-one p {
+	font-size: 1.7em;
+	color: #999;
+	font-family: 'Lato', sans-serif;
+	margin: 5px 0 0 0;
+	font-weight: 700;
+	display: inline-block;
+	vertical-align: middle;
+}
+.p-one p a {
+	text-decoration: none;
+	color: #999;
+}
+.p-one p i {
+	background: url(../images/cart.png) no-repeat;
+	width: 25px;
+	height: 18px;
+	display: inline-block;
+	margin-right: 4px;
+	vertical-align: middle;
+	background-size: 100%;
+}
+
+.p-one h4 {
+	font-size: 17px;
+	margin: 0px 0 0 0;
+}
+.p-one p {
+	font-size: 1.3em;
+}
+
+.p-one {
+	padding: 0px 10px 20px 10px;
+}
+
+.product-left:hover .mask{
+	display:block;
+}
+
+.mask {
+	display: none;
+	position: absolute;
+	top: 44%;
+	left: 33%;
+}
+.mask span{
+	background:#8c2830;
+	color:#fff;
+	font-size:15px;
+	font-weight:400;
+	padding:6px 12px;
+}
+.mask span:hover{
+	text-decoration:none;
+	background:#181b2a;
+	transition: 0.7s all;
+	-webkit-transition: 0.7s all;
+	-o-transition: 0.7s all;
+	-moz-transition: 0.7s all;
+	-ms-transition: 0.7s all;
+}
+
+.page {
+	width:30%;
+	margin-top: 50px;
+	margin-left:600px;
+	height: 50px;
+}
+
+.page p {
+	font-size: 1.2em;
+	color: #999;
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	font-weight: 700;
+	display: inline-block;
+	vertical-align: middle;
+}
+.page p a {
+	text-decoration: none;
+	color: #999;
+}
+
+.page p a:hover {
+	text-decoration: none;
+	color: #8c2830;
+}
+
+.cart{
+	padding: 0;
+	margin: 7em 0px;
+	float:right;
+	width: 170px;
+	height: 400px;
+	overflow:auto;  
+}
+
+.cart p a{
+	text-decoration: none;
+	color: #999;
+}
+
+.cart p a:hover{
+	text-decoration: none;
+	color: #8c2830;
+}
+
+.copyright{
+	text-align:center;
+	font-size: 13px;
+	float: left;
+	padding: 50px 0px 0px 0px;
+	width: 100%;
+  	color: #000;
+}
+
+.copyright p {
+	font-size: 13px;
+	padding: 50px 0px 0px 0px;
+}
+.copyright p a{
+	font-size: 13px;
+}
